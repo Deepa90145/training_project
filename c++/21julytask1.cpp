@@ -2,9 +2,10 @@
 
 using namespace std;
 
-int main() {
+	int main() {
 
-cout<<"This is my first c program\n";
+	cout<<"This is my first c program\n";
 
-return 0;
-}
+	return 0;
+
+	}
