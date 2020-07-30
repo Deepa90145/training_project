@@ -8,7 +8,8 @@ using namespace std;
 	 swap=*a;  
 	 *a=*b;  
 	 *b=swap;  
-	}  
+	}
+  
 	int main()   
 	{    
 	 int a=500, b=100;    
