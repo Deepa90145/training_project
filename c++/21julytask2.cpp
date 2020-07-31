@@ -3,8 +3,8 @@
 using namespace std;
 
 int main() {
-
-unsigned int num1,num2,add,sub,multi;
+    int num1,num2,add,sub,multi;
+    double division;
 cout<<"You have to enter two positive integers\n";
 
 cout<<"Enter first positive integer\n";
@@ -28,6 +28,11 @@ cout<<sub<<endl;
 cout<<"Multiplication of number entered is:";
 multi=num1*num2;
 cout<<multi<<endl;
+
+//Division
+cout<<"Division of number entered is:";
+division=num1/num2;
+cout<<division<<endl;
 
 return 0;
 
