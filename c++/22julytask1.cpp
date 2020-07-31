@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int num1, num2;
+    int num1, num2,num3,max;
 
     
     cout<<"Enter first number\n";
@@ -13,23 +13,11 @@ int main()
     cout<<"enter second number\n";
     cin>>num2;
 
-   
-    if(num1 > num2)
-    {
-        cout<<"greatest of two is :"<<" "<< num1<<endl;        
-    }
+    cout<<"enter third number\n";
+    cin>>num3;
 
+    max = (num1 > num2) ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
     
-    if(num2 > num1)
-    {
-        cout<<"greatest of two is :"<<" "<< num2<<endl;
-    }
-
-    
-    if(num1 == num2)
-    {
-        cout<<"both are equal";
-    }
-    
+    cout<<"Greatest of three is:"<<" "<<max<<endl;
     return 0;
     }
