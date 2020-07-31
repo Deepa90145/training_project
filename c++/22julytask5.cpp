@@ -3,6 +3,7 @@
 
 using namespace std;
 
+    //defining structure
 	struct students{
 
 	char name[20];
@@ -10,48 +11,55 @@ using namespace std;
 	float percentage;
 
 	};
-
-	struct studentcopy {
-
-	char name[20];
-	int age ;
-	float percentage;
-
-	};
-
-	void print (struct students student);
+    
+    
+    int i;
+    
+    //declaring function
+	void print (struct students stud[]);
 
 	int main() {
 
-	struct students student1,student2;
-	struct studentcopy stu;
-
-	strcpy(student1.name,"Deepa");
-	student1.age=20;
-	student1.percentage=90;
+	struct students stu[3];
+	struct students stu2;
 
 
-	strcpy(student2.name,"Deepa");
-	student2.age=20;
-	student2.percentage=90;
+   for(i=0; i<2; i++){ //taking values from user
+    cout << "Student " << i + 1 << endl;
+    cout << "Enter name" << endl;
+    cin >> stu[i].name;
+    cout << "Enter age" << endl;
+    cin >> stu[i].age;
+    cout << "Enter percentage" << endl;
+    cin >> stu[i].percentage;
+    
+   
+   }
 
-	print(student1);
-	print(student2);
+   //passing structure array to function
+   cout<<"\n\nDiplay total number of students and data\n";
+    print(stu);
+	
 
-	strcpy(stu.name,student1.name);
-	stu.age=student1.age;
-	stu.percentage=student1.percentage;
 
-	cout<<"data of student1 copied\n";
-	cout<<"name of the student is"<<stu.name<<endl;
-	cout<<"age of the student is"<<stu.age<<endl;
-	cout<<"percentage of the student is"<<stu.percentage<<endl;
+//copy structure
+  stu2=stu[1];
+  cout<<"\n\nData after being copied from structure1 and structure2\n";
+  cout << "name : " << stu2.name << endl;
+  cout << "age : " << stu2.age<< endl;
+  cout << "percentage : " << stu2.percentage << endl;
+                
 
 	return 0;
 	}
 
-	void print(struct students student){
-	cout<<"name of the student is"<<student.name<<endl;
-	cout<<"age of the student is"<<student.age<<endl;
-	cout<<"percentage of the student is"<<student.percentage<<endl;
-	}
+
+//using function to print student infromation
+	void print(struct students stud[]){
+        for(i=0; i<2; i++){    //printing values
+            cout << "Student " << i + 1 << endl;
+            cout << "name : " << stud[i].name<< endl;
+             cout << "Name : " << stud[i].age << endl;
+             cout << "Percenatage : " << stud[i].percentage <<"\n";
+                                        }
+    }	
