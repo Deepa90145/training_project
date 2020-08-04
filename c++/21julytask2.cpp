@@ -31,9 +31,13 @@ cout<<multi<<endl;
 
 //Division
 cout<<"Division of number entered is:";
-division=num1/num2;
+if(num2==0) {
+    cout<<"\nPlease enter valid denominator,denomitaor for division must be greater than zero\n";
+}
+else{
+    division=num1/num2;
 cout<<division<<endl;
-
+}
 return 0;
 
 }
