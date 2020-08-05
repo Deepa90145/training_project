@@ -19,6 +19,10 @@ WriteFile()
         
         'N')
             echo "thank you"
+        ;;
+
+        *)
+        echo "Please enter either 'Y' or 'N'"
       ;;
         esac 
         
