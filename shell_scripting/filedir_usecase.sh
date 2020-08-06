@@ -1,6 +1,8 @@
 #!/bin/bash
-echo "Enter dirctory name and file name"
-read ndir nfile
+echo "Enter dirctory name "
+read ndir 
+echo "Enter file name"
+read nfile
 
 
 #write in file
