@@ -48,23 +48,23 @@ void *create_employee(){
         goto end;
     }
 
-cJSON *company_details=cJSON_CreateObject();
-if (company_details== NULL)
+    cJSON *company_details=cJSON_CreateObject();
+    if (company_details== NULL)
     {
         goto end;
     }
 
-   cJSON_AddStringToObject(company_detail, "NAME:","ABC");
-    cJSON_AddStringToObject(company_detail,"Location","Gurgaon");
-    cJSON_AddBoolToObject(company_detail,"Boolean value",1);
-cJSON_AddItemToObject(personal_details,"Company_details",comapny_detail);
-    
+    cJSON_AddStringToObject(company_details, "NAME:","ABC");
+    cJSON_AddStringToObject(company_details,"Location","Gurgaon");
+    cJSON_AddBoolToObject(company_details,"Boolean value",1);
+    cJSON_AddItemToObject(personal_details,"Company_details",company_details);
+
     //passing second object "employee_details" to third object "personal_details"
     cJSON_AddItemToObjectCS(personal_details,"personal_details",employee_detail);
 
     //passing third object to main object "employee"
     cJSON_AddItemToObjectCS(employee,"employee_detail:",personal_details);
-    
+
 
     string = cJSON_Print(employee);
     if (string == NULL)
@@ -74,7 +74,7 @@ cJSON_AddItemToObject(personal_details,"Company_details",comapny_detail);
 
 end:
     cJSON_Delete(employee);
-    printf("%s",string);
+    printf("%s\n",string);
 
 
 }
