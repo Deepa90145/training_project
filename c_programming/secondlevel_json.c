@@ -42,18 +42,29 @@ void *create_employee(){
 
     // creating third json object
     cJSON *personal_details=cJSON_CreateObject();
-
     //checking for expection
     if (personal_details== NULL)
     {
         goto end;
     }
+
+cJSON *company_details=cJSON_CreateObject();
+if (company_details== NULL)
+    {
+        goto end;
+    }
+
+   cJSON_AddStringToObject(company_detail, "NAME:","ABC");
+    cJSON_AddStringToObject(company_detail,"Location","Gurgaon");
+    cJSON_AddBoolToObject(company_detail,"Boolean value",1);
+cJSON_AddItemToObject(personal_details,"Company_details",comapny_detail);
+    
     //passing second object "employee_details" to third object "personal_details"
     cJSON_AddItemToObjectCS(personal_details,"personal_details",employee_detail);
 
     //passing third object to main object "employee"
     cJSON_AddItemToObjectCS(employee,"employee_detail:",personal_details);
-
+    
 
     string = cJSON_Print(employee);
     if (string == NULL)
