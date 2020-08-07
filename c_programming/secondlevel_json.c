@@ -31,7 +31,7 @@ void *create_employee(){
         goto end;
     }
     //passing string to first object "employee"
-    cJSON_AddStringToObject(employee,"Employee:","101");
+    cJSON_AddStringToObject(employee,"Employee","101");
 
     //adding values to second object "employee_details"
     cJSON_AddStringToObject(employee_detail, "NAME:","Deepa");
